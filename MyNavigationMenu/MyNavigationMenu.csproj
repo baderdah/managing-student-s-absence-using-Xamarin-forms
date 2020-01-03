@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="MenuPage.xaml" />
+    <EmbeddedResource Remove="SeancesPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MenuPage.xaml.cs" />
+    <Compile Remove="AddNewClassePage.xaml.cs" />
+    <Compile Remove="NewStudentPage.cs" />
+    <Compile Remove="LessonsPage.cs" />
+    <Compile Remove="SeancesPage.xaml.cs" />
+    <Compile Remove="SeancesPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="SelectedPage.xaml.cs">
+      <DependentUpon>SelectedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="ClasseDetailsPage.xaml.cs">
+      <DependentUpon>Model\ClasseDetailsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Persistance\" />
+  </ItemGroup>
+</Project>

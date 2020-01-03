@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage
+    NavigationPage.HasNavigationBar="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="MyNavigationMenu.MyMenu"
+                  IsPresented="True"
+                  >
+    <!-- The Master Page : our Menu -->
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu"
+                     Padding="0,40,0,0"
+                     BackgroundColor="DarkCyan"
+                     >
+            <StackLayout
+                Spacing="30"
+                >
+                <BoxView
+                    HeightRequest="100"
+                    Color="DarkCyan">
+
+                </BoxView>
+                <Button
+                    TextColor="White"
+                    FontAttributes="Bold"
+
+                    Text="Seances"
+                    Clicked="handleSelectedItem"
+                    BackgroundColor="CadetBlue" />
+                <Button
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="handleSelectedItem"
+                    Text="Classes"
+                        BackgroundColor="CadetBlue" />
+                <Button
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="handleSelectedItem"
+                    Text="Lessons"
+                    BackgroundColor="CadetBlue" />
+                <Button
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Text="Search"
+                    Clicked="handleSelectedItem"
+                    BackgroundColor="CadetBlue" />
+                <Button
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Text="Log Out"
+                    BackgroundColor="CadetBlue"
+                    Clicked="handleLogOut"
+                        />
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <!--  The Details page : the selected page from the menu-->
+    <MasterDetailPage.Detail>
+        <ContentPage
+            />
+    </MasterDetailPage.Detail>
+
+
+</MasterDetailPage>
+

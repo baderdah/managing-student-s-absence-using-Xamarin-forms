@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyNavigationMenu.RegisterPage">
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Spacing="20"
+        >
+        <Entry
+            x:Name="firstName"
+            Keyboard="Default"
+            Placeholder="first name"/>
+        <Entry
+            x:Name="lastName"
+            Keyboard="Default"
+            Placeholder="last name"/>
+        <Entry
+            x:Name="userName"
+            Keyboard="Email"
+            Placeholder="Username or Email"/>
+        <Entry
+            x:Name="password"
+            IsPassword="True"
+            Placeholder="Passworld" />
+        <Button
+            x:Name="loginBtn"
+            Clicked="loginBtn_Clicked"
+            Text="Login"
+            TextColor="White"
+            FontAttributes="Bold"
+            BackgroundColor="LightGreen"/>
+    </StackLayout>
+</ContentPage>

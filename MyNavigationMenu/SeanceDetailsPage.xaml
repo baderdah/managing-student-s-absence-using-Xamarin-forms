@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyNavigationMenu.SeanceDetailsPage">
+    <StackLayout>
+
+        <ListView
+            VerticalOptions="Fill"
+            x:Name="seancesListView"
+            SeparatorVisibility="None">
+
+
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10 ">
+                            <Label x:Name="studentLastName" Text="{Binding st.lastName}"/>
+                            <Label x:Name="studentFirstName" Text="{Binding st.firstName}" />
+                            <Label x:Name="studentAbsCount" Text="{Binding nbOfAbs}" HorizontalOptions="EndAndExpand"  />
+                            <Switch  Toggled="Switch_Toggled" OnColor="Red" IsToggled="{Binding absent}" /> 
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+             
+        </ListView>
+
+        <Button
+            Margin="0,0,0,20"
+            VerticalOptions="EndAndExpand"
+            x:Name="markAbsent"
+            Text="Save Absence"
+            Clicked="markAbsent_Clicked"
+            />
+
+    </StackLayout>
+</ContentPage>

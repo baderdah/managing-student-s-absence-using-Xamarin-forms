@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyNavigationMenu.NewLessonPage">
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Spacing="20"
+        >
+        <Entry
+            x:Name="name"
+            Keyboard="Default"
+            Placeholder="Lesson's name"/>
+        <Button
+            x:Name="CreateBtn"
+            Clicked="CreateBtn_Clicked"
+            Text="Create"
+            TextColor="White"
+            FontAttributes="Bold"
+            BackgroundColor="LightGreen"/>
+    </StackLayout>
+</ContentPage>
